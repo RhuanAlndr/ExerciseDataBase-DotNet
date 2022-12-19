@@ -1,0 +1,25 @@
+﻿@model CarModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-action="create" asp-controller="Car" method="post">
+  <div class="mb-3 row">
+    <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" asp-for="Name" class="form-control" id="inputName">
+    </div>
+  </div>
+  
+  <div class="mb-3 row">
+    <label for="inputYear" class="col-sm-2 col-form-label">Year</label>
+    <div class="col-sm-10">
+      <input type="number" asp-for="Year" class="form-control" id="inputYear">
+    </div>
+  </div>
+  <div>
+      <button class="btn btn-primary" type="submit" value="Create">Create</button>
+      <a class="btn btn-primary" asp-action="Index" asp-controller="Car" role="button">Back</a>
+  </div>
+</form>
